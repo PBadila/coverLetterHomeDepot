@@ -43,7 +43,12 @@ let slot3Img = document.querySelector(".slot3Img");
 let slot2Title = document.querySelector(".slot2Title");
 let slot3Title = document.querySelector(".slot3Title");
 let button5 = document.querySelector(".button5");
-
+;
+// let linkDiv = document.querySelector(".linkDiv");
+let link1 = document.querySelector(".link1");
+let link2 = document.querySelector(".link2");
+let link3 = document.querySelector(".link3");
+let featLiveLink = document.querySelector(".featLiveLink");
 console.log(rightArrow);
 console.log(draggableElements);
 
@@ -58,14 +63,30 @@ button4.className="button4";
 let p1Title="Interactive Cover Letter";
 let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenge in this project has been getting the Drag and Drop feature to behave exactly as I want it."
 let p1Image="./imgs/coverLetterProject.png";
+let p1link1="https://github.com/PBadila/coverLetterHomeDepot";
+let p1link1Inner="GitHub"
+let p1Live="https://cvhomedepot.onrender.com";
 
 let p2Title="Personal Blog";
 let p2Description="The goal of this blog was to document my journey from the end of bootcamp to getting a job as a Software Engineer. I used this project to practice creating a database and get comfortable with React. I encountered a few obstacles, all which I actually chronicled in the blog, such as password protection and being able to edit a post. Another issue, one that I keep encountering, is getting the info from the API's to show up on the web page.  I think this may be an issue with the host that I am using, but the work around is to have the LOADING... message. If you encounter it, wait awhile, trust me - it will load eventually.";
 let p2Image="./imgs/blog.png";
+let p2link1="https://www.youtube.com/watch?v=NRrTH-7el38";
+let p2link1Inner="Video"
+let p2link2="https://github.com/PBadila/blog";
+let p2link2Inner="GitHub Backend";
+let p2Live = "https://journeytosoftwareengineer.onrender.com/";
 
 let p3Title="Community Garden";
 let p3Description="An app aimed at addressing food deserts by allowing users to join and interact with a community garden. As an urban agriculturist, this project was of particular interest to me. I played a key role in building the backend, creating the database and routes, and implementing API fetches. This project provided valuable experience in team dynamics, user story-driven programming, GitHub collaboration, as well as deployment through Render.com and database hosting with ElephantSQL.";
 let p3Image="./imgs/garden.png";
+let p3link1="https://github.com/PBadila/community-garden-front-end";
+let p3link1Inner="GitHub Frontend"
+let p3link2="https://github.com/PBadila/community-garden-backend";
+let p3link2Inner="GitHub Backend"
+let p3link3="https://community-garden-api.onrender.com/";
+let p3link3Inner="API"
+let p3Live = "https://community-garden.onrender.com/";
+
 
 // Initial speech bubble and click here
 window.addEventListener('load', function () {
@@ -118,13 +139,13 @@ moreButton.addEventListener('click', function () {
     fading.classList.add('fade')
     setTimeout( function() {
         coverLetterPart1.classList.add('clicked');
-    }, 1000);
+    },500);
     setTimeout( function() {
         coverLetterPart2.classList.add('slide');
-    }, 1000);
+    }, 500);
     setTimeout( function() {
         coverLetterPart2.style.display="flex";
-    }, 1000);
+    },500);
 })
 //showing the alternate text when the mouse is over a section
 hoverDivStudy.addEventListener('mouseover', function () {
@@ -166,7 +187,7 @@ more2Button.addEventListener('click', function () {
     coverLetterPart2.classList.add("clicked");
     setTimeout( function() {
         coverLetterPart3.style.display="flex";
-    }, 2000);
+    }, 1000);
 })
 
 
@@ -244,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
             droppedNum++;
             console.log(droppedNum);
             if(droppedNum==1){
-                
+               
                 coverLetterPart3.appendChild(button4);
               
 
@@ -273,6 +294,14 @@ rightArrow.addEventListener('click', () => {
             displayProject.src=p2Image;
             projectTitle.innerText=p2Title;
             projectDescription.innerText=p2Description;
+            featLiveLink.setAttribute("href",p2Live);
+            link1.setAttribute("href",p2link1);
+            link2.setAttribute("href",p2link2);
+            link1.innerText=p2link1Inner;
+            link2.innerText=p2link2Inner;
+            link3.setAttribute("href","#");
+            link3.innerText="";
+
             //switching the 2nd box
             slot2Title.innerText=p3Title;
             slot2Img.src=p3Image;
@@ -288,6 +317,14 @@ rightArrow.addEventListener('click', () => {
             displayProject.src=p3Image;
             projectTitle.innerText=p3Title;
             projectDescription.innerText=p3Description;
+            featLiveLink.setAttribute("href",p3Live);
+            link1.setAttribute("href",p3link1);
+            link2.setAttribute("href",p3link2);
+            link3.setAttribute("href",p3link3);
+            link1.innerText=p3link1Inner;
+            link2.innerText=p3link2Inner;
+            link3.innerText=p3link3Inner;
+
             //switching the 2nd box
             slot2Title.innerText=p1Title;
             slot2Img.src=p1Image;
@@ -303,6 +340,15 @@ rightArrow.addEventListener('click', () => {
             displayProject.src=p1Image;
             projectTitle.innerText=p1Title;
             projectDescription.innerText=p1Description;
+            featLiveLink.setAttribute("href",p1Live);
+            link1.setAttribute("href",p1link1);
+            link1.innerText=p1link1Inner;
+            link2.setAttribute("href","#");
+            link2.innerText="";
+            link3.setAttribute("href","#");
+            link3.innerText="";
+            
+           
             //switching the 2nd box
             slot2Title.innerText=p2Title;
             slot2Img.src=p2Image;
@@ -326,6 +372,13 @@ leftArrow.addEventListener('click', () => {
             displayProject.src=p3Image;
             projectTitle.innerText=p3Title;
             projectDescription.innerText=p3Description;
+            featLiveLink.setAttribute("href",p3Live);
+            link1.setAttribute("href",p3link1);
+            link2.setAttribute("href",p3link2);
+            link3.setAttribute("href",p3link3);
+            link1.innerText=p3link1Inner;
+            link2.innerText=p3link2Inner;
+            link3.innerText=p3link3Inner;
             //switching the 2nd box
             slot2Title.innerText=p1Title;
             slot2Img.src=p1Image;
@@ -341,6 +394,13 @@ leftArrow.addEventListener('click', () => {
             displayProject.src=p1Image;
             projectTitle.innerText=p1Title;
             projectDescription.innerText=p1Description;
+            featLiveLink.setAttribute("href",p1Live);
+            link1.setAttribute("href",p1link1);
+            link1.innerText=p1link1Inner;
+            link2.setAttribute("href","#");
+            link2.innerText="";
+            link3.setAttribute("href","#");
+            link3.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p2Title;
             slot2Img.src=p2Image;
@@ -357,6 +417,13 @@ leftArrow.addEventListener('click', () => {
             displayProject.src=p2Image;
             projectTitle.innerText=p2Title;
             projectDescription.innerText=p2Description;
+            featLiveLink.setAttribute("href",p2Live);
+            link1.setAttribute("href",p2link1);
+            link2.setAttribute("href",p2link2);
+            link1.innerText=p2link1Inner;
+            link2.innerText=p2link2Inner;
+            link3.setAttribute("href","#");
+            link3.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p3Title;
             slot2Img.src=p3Image;
