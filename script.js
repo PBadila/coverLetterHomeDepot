@@ -43,7 +43,19 @@ let slot3Img = document.querySelector(".slot3Img");
 let slot2Title = document.querySelector(".slot2Title");
 let slot3Title = document.querySelector(".slot3Title");
 let button5 = document.querySelector(".button5");
-;
+let coverLetterPart5 = document.querySelector(".coverLetterPart5");
+let why1 = document.querySelector(".why1");
+let why2 = document.querySelector(".why2");
+let why3 = document.querySelector(".why3");
+let why4 = document.querySelector(".why4");
+let why5 = document.querySelector(".why5");
+let button6 = document.querySelector(".button6");
+let why6 = document.querySelector(".why6");
+let why7 = document.querySelector(".why7");
+let resumeDownload = document.querySelector(".resumeDownload");
+let end = document.querySelector(".end");
+let startOver = document.querySelector(".startOver");
+let paint = document.querySelector(".paint");
 // let linkDiv = document.querySelector(".linkDiv");
 let link1 = document.querySelector(".link1");
 let link2 = document.querySelector(".link2");
@@ -55,6 +67,7 @@ console.log(draggableElements);
 let managerName;
 let count;
 let changeName = 0;
+let button6Click = 0;
 
 const button4 = document.createElement("button");
 button4.className="button4";
@@ -438,5 +451,43 @@ leftArrow.addEventListener('click', () => {
 
 button5.addEventListener('click', () =>{
     coverLetterPart4.style.display="none";
+    coverLetterPart5.style.display="flex";
+    setTimeout( function() {
+        button6.style.visibility="visible";
+    }, 3000);
+    button6Click = 0;
 })
+
+button6.addEventListener('click', () => {
+    console.log(button6Click);
+    switch (button6Click){
+        case 0:
+            why1.style.display="none";
+            why2.style.display="none";
+            why3.style.display="none";
+            why4.style.display="block";
+            why5.style.display="block";
+            button6Click++;
+            break;
+        case 1:
+            why4.style.display="none";
+            why5.style.display="none";
+            why6.style.display="block";
+            why7.style.display="block";
+            resumeDownload.style.display="block";
+            button6Click++;
+            break;
+        case 2:
+            why6.style.display="none";
+            why7.style.display="none";
+            resumeDownload.style.display="none";
+            end.style.display="block";
+            
+            paint.style.display="block";
+            button6.style.display="none";
+    }
+  
+})
+
+
 
