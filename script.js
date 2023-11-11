@@ -22,12 +22,12 @@ let passion = document.querySelector(".passion");
 let passionHover= document.querySelector(".passionHover");
 let hoverDivPassion = document.querySelector(".hoverDivPassion");
 let coverLetterPart3 = document.querySelector(".coverLetterPart3");
-let explanationTextBox = document.getElementById("explanationTextBox");
+let explanationTextBox = document.querySelector(".explanationTextBox");
 let draggableElements = document.querySelectorAll(".draggable");
-let dropZone = document.getElementById("dropZone");
+let dropZone = document.querySelector(".dropZone");
 let dropComImg = document.querySelector(".dropComImg");
 let dropHere = document.querySelector(".dropHere");
-let dragContainer = document.getElementById("dragContainer");
+let dragContainer = document.querySelector(".dragContainer");
 let carouselBootstrap = document.getElementById("carouselBootstrap");
 let campHeader = document.querySelector(".campHeader");
 let coverLetterPart4 = document.querySelector(".coverLetterPart4");
@@ -72,9 +72,9 @@ let button6Click = 0;
 const button4 = document.createElement("button");
 button4.className="button4";
 
-//Project Details
+//Project Details (Title, Description, Image, Links)
 let p1Title="Interactive Cover Letter";
-let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenge in this project has been getting the Drag and Drop feature to behave exactly as I want it."
+let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenges in this project have been getting the Drag and Drop feature to behave exactly as I want it and also the responsiveness (which I am still working on)."
 let p1Image="./imgs/coverLetterProject.png";
 let p1link1="https://github.com/PBadila/coverLetterHomeDepot";
 let p1link1Inner="GitHub"
@@ -101,14 +101,14 @@ let p3link3Inner="API"
 let p3Live = "https://community-garden.onrender.com/";
 
 
-// Initial speech bubble and click here
+// Initial speech bubble and click here for Introduction Page
 window.addEventListener('load', function () {
     setTimeout( function() {
         speechBubble.style.visibility = 'visible';
-    }, 1500);
+    }, 900);
     setTimeout( function() {
         blinkBox.style.visibility = 'visible';
-    }, 3000);
+    }, 2000);
 });
 
 
@@ -154,7 +154,7 @@ moreButton.addEventListener('click', function () {
         coverLetterPart1.classList.add('clicked');
     },500);
     setTimeout( function() {
-        coverLetterPart2.classList.add('slide');
+        coverLetterPart2.classList.add('slideScreen4');
     }, 500);
     setTimeout( function() {
         coverLetterPart2.style.display="flex";
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
             screenImg.style.width="90px";
             dropComImg.appendChild(screenImg);
             // dropComImg.appendChild(droppedIcon);
-            explanationTextBox.value = explanation;
+            explanationTextBox.innerText = explanation;
             droppedNum++;
             console.log(droppedNum);
             if(droppedNum==1){
