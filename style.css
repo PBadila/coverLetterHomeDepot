@@ -530,6 +530,7 @@ transform: translateX(400%);
 .coverLetterPart3{
     display:none;
     flex-direction:column;
+    align-items: center;
     width:100%;
     height:100%;
     color:white;
@@ -542,37 +543,27 @@ transform: translateX(400%);
 }
 .bootcampBox{
     /* background-color:purple; */
-    position:absolute;
+    /* position:absolute;
     top:0%;
-    left:0%;
+    left:0%; */
     width:100%;
     text-align:center;
-    margin-bottom:100px;
+    margin-bottom:2%;
     height:20%;
 }
 
-.dragDropMainContainer{
+.dragContainer{
     display:flex;
-    flex-direction:column;
-    position:relative;
-    top:35%;
-    left:1%;
-    height:60%;
-    width:100%;
-    /* background-color: purple; */
-    
-}
-
-.dragDropInnerContainer{
-    display:flex;
-    flex-direction:column;
+    flex-wrap:wrap;
     justify-content: center;
-    width:100%;
-    height:100%;
-    position:relative;
-    top:-20%;
-
+    align-content:center;
+    width:98%;
+    background-color:white;
+    border:5px solid black;
+    height:30%;
 }
+
+
 .draggable{
     cursor:move;
     user-select: none;
@@ -587,35 +578,25 @@ transform: translateX(400%);
     margin-top:10px;
     cursor:pointer;
 }
-.dragContainer{
-    /* align-self:center; */
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    width:98%;
-    background-color:white;
-    border:5px solid black;
-    position:relative;
-    top:0%;
-    left:0%;
-    height:30%;
-}
+
 
 
 .dropZone{
     
-    width:98%;
-    height:100%;;
+    width:100%;
+    height:35%;
     color:black;
     display:flex;
     flex-direction: row;
-    margin-top:30px;   
-    /* background-color:red;  */
+   padding-left:50px;
+    margin-top:10px;  
+    /* background-color: aqua; */
+   
 }
 
 .dropHere{
-    width:93%;
-    height:80%;
+    width:45%;
+    height:90%;
    display:flex;
    flex-wrap: wrap;
    padding:20px;
@@ -624,58 +605,63 @@ transform: translateX(400%);
    border:5px solid #42BFCE; 
 }
 
+.tool{
+    width:200px;
+    position:relative;
+    left:-10%;
+    top:44%;
+    z-index:9999;
+}
+
+.dropComImg{
+    width:45%;
+    height:100%;
+    /* background-color: green; */
+}
+
+
+
+.dropLaptop{
+    width:70%;
+    height:auto;
+    position:relative;
+    top:-20%;
+}
+
 .explanationBox{
     /* background-color:red; */
-    height:30%;
+    height:100%;
+    width:70%;
     position:relative;
-    top:-15%;
+    top:-180%;
+    left:0%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+   
 }
 .explanationTextBox{
     color:green;
     font-family: 'Press+Start+2P', monospace;
-    position:relative;
-    top:30%;
-    left:-2%;
+    /* position:relative;
+    top:-10%;
+    left:27%; */
     z-index:999999;
-    text-align: center;
-    font-size: 26px;
+    font-size: 170%;
     border: none;
     font-weight:bolder;
    
 }
 
-
-
-.dropComImg{
-    width:100%;
-    height:60%;
-    position:relative;
-    right:0%;
-    bottom:0%; 
-}
-.dropLaptop{
-    width:70%;
-    height:auto;
-    position:absolute;
-    right:15%;
-    bottom:-130%;
-    z-index:1001;
-}
-
 .smIcon{
-    position:relative;
-    left:42%;
-    bottom:10%;
+    /* position:relative;
+    left:27%;
+    top:-12%; */
     z-index:1002;
 }
 
-.tool{
-    width:200px;
-    position:absolute;
-    left:40%;
-    top:60%;
-    z-index:9999;
-}
+
 .wrench{
     width:40px;
 }
@@ -1021,10 +1007,10 @@ top:75%;
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width:1100px){
+@media only screen and (max-width:1200px){
    
     /* page 5 */
-    .dragContainer{
+    /* .dragContainer{
         height:45%;
     }
     .smIcon{
@@ -1032,9 +1018,11 @@ top:75%;
     }
     .explanationBox{
         top:0%;
+    } */
+
+    .explanationBox{
+        top:-150%;
     }
-
-
 }
 
 @media only screen and (max-width:1000px) {
@@ -1063,6 +1051,11 @@ top:75%;
     /* .coverLetterPart4{
         flex-direction: column;
     } */
+
+    .bootcampBox{
+        height:30%;
+        margin-bottom:7%;
+    }
 }
 
 

@@ -22,6 +22,7 @@ let passion = document.querySelector(".passion");
 let passionHover= document.querySelector(".passionHover");
 let hoverDivPassion = document.querySelector(".hoverDivPassion");
 let coverLetterPart3 = document.querySelector(".coverLetterPart3");
+let explanationBox = document.querySelector(".explanationBox");
 let explanationTextBox = document.querySelector(".explanationTextBox");
 let draggableElements = document.querySelectorAll(".draggable");
 let dropZone = document.querySelector(".dropZone");
@@ -271,8 +272,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const screenImg = document.createElement("img");
             screenImg.className ="smIcon"
             screenImg.src=iconSrc;
-            screenImg.style.width="90px";
-            dropComImg.appendChild(screenImg);
+            screenImg.style.width="20%";
+            explanationBox.appendChild(screenImg);
             // dropComImg.appendChild(droppedIcon);
             explanationTextBox.innerText = explanation;
             droppedNum++;
