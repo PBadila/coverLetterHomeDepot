@@ -874,13 +874,16 @@ top:75%;
 .coverLetterPart5{
     display:none;
     flex-direction:row;
+    justify-content: center;
+    align-items: flex-end;
     /* background-color: #B9ABFF; */
     width: 98%;
-    height:70%;
+    height:78%;
     position:absolute;
     top:0%;
     left:0%;
-    padding-top:10%;
+    padding-top:5%;
+ 
 
 }
 
@@ -888,25 +891,26 @@ top:75%;
     width:20%;
     height:60%;
     /* background-color: aquamarine; */
-    position:relative;
-    bottom:0%;
+    /* position:relative;
+    bottom:0%; */
 }
 
 .constr{
     width:300px;
-    position:relative;
-    bottom:-20%;
+    /* position:relative;
+    bottom:-20%; */
 }
 
 .whyExplanationBox{
     background-color:white;
     border:5px solid black;
     width:50%;
+    height:100%;
     z-index:1;
     padding:20px;
     height:60%;
-    position:relative;
-    bottom:0%;
+    /* position:relative;
+    bottom:0%; */
 }
 
 .mousePic{
@@ -922,9 +926,9 @@ top:75%;
 .hireMe{
     height:40%;
     position:relative;
-    bottom:-20%;
     right:30%;
-    /* z-index:0; */
+    z-index:0;
+    padding-bottom:3%;
     animation:slideOut 3s forwards;
 }
 
@@ -979,9 +983,9 @@ top:75%;
     width:60px;
     height:60px;
     border:none;
-    position:relative;
+    /* position:relative;
     right:0%; 
-    top:40%;
+    top:40%; */
     z-index:999999;
 }
 .end{
